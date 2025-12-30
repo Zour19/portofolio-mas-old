@@ -3,135 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio saya</title>
+    <title>Alfi Andiha | Photographer Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header style="position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.8); z-index: 10; padding: 10px 0;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
-            <h3 style="color: white; margin: 0;">[alfi andiha] Photographer</h3>
+   <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="#hero">
+                    <img src="https://via.placeholder.com/150x50/000000/FFFFFF?text=ALFI+ANDIHA" alt="Alfi Andiha Logo" class="main-logo">
+                </a>
+            </div>
+        
             <nav>
-                <a href="#hero" style="color: white; margin: 0 15px; text-decoration: none;" onclick="smoothScroll(event, 'hero')">Hero</a>
-                <a href="#gallery" style="color: white; margin: 0 15px; text-decoration: none;" onclick="smoothScroll(event, 'gallery')">Gallery</a>
-                <a href="#about" style="color: white; margin: 0 15px; text-decoration: none;" onclick="smoothScroll(event, 'about')">About</a>
-                <a href="#promo" style="color: white; margin: 0 15px; text-decoration: none;" onclick="smoothScroll(event, 'promo')">Promo</a>
+                <a href="#hero" onclick="smoothScroll(event, 'hero')">Hero</a>
+                <a href="#gallery" onclick="smoothScroll(event, 'gallery')">Gallery</a>
+                <a href="#about" onclick="smoothScroll(event, 'about')">About</a>
+                <a href="#promo" onclick="smoothScroll(event, 'promo')">Promo</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
             <h1>Menangkap Momen, Mengabadikan Cerita – Professional Photographer berbasis di Jakarta.</h1>
-            <button class="btn-cta" onclick="smoothScroll(event, 'gallery')">Lihat Karya Saya</button>
+            <button class="btn-cta" onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})">Lihat Karya Saya</button>
         </div>
     </section>
 
-    <!-- Gallery Section -->
     <section id="gallery" class="gallery">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="text-align: center;">Hasil Pekerjaan</h2>
+        <div class="container">
+            <h2>Hasil Pekerjaan</h2>
             <div class="filter-buttons">
                 <button class="filter-btn active" data-category="all">Semua</button>
-                <button class="filter-btn" data-category="wedding">Wedding & Engagement</button>
-                <button class="filter-btn" data-category="portrait">Portrait & Fashion</button>
-                <button class="filter-btn" data-category="commercial">Commercial/Product</button>
-                <button class="filter-btn" data-category="event">Event & Lifestyle</button>
-            </div>&
+                <button class="filter-btn" data-category="wedding">Wedding</button>
+                <button class="filter-btn" data-category="portrait">Portrait</button>
+                <button class="filter-btn" data-category="commercial">Commercial</button>
+                <button class="filter-btn" data-category="event">Event</button>
+            </div>
+            
             <div class="gallery-grid">
                 <div class="gallery-item" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600" alt="Wedding" onclick="openLightbox(this.src)">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=800&fit=crop" alt="Wedding" onclick="openLightbox(this.src)">
                 </div>
                 <div class="gallery-item" data-category="portrait">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600" alt="Portrait" onclick="openLightbox(this.src)">
-                    <!--(untutk menambahkan foto melalui file aseet)V<img src="assets/images/gallery/wedding-1.webp" 
-                    alt="Wedding Photo" 
-                    loading="lazy" 
-     onclick="openLightbox(this.src)"> -->                
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=800&fit=crop" alt="Portrait" onclick="openLightbox(this.src)">
                 </div>
                 <div class="gallery-item" data-category="commercial">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="Product" onclick="openLightbox(this.src)">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=800&fit=crop" alt="Product" onclick="openLightbox(this.src)">
                 </div>
                 <div class="gallery-item" data-category="event">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="event" onclick="openLightbox(this.src)">
+                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&h=800&fit=crop" alt="Event" onclick="openLightbox(this.src)">
                 </div>
+                <div class="gallery-item" data-category="wedding">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=800&fit=crop" alt="Wedding 2" onclick="openLightbox(this.src)">
+                </div>
+                <div class="gallery-item" data-category="portrait">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop" alt="Portrait 2" onclick="openLightbox(this.src)">
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn-cta">Lihat Lebih Banyak Foto</a>
             </div>
         </div>      
     </section>
-    <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
-        <a href="iwedding.html" class="btn-cta">Lihat Lebih Banyak Foto</a>
-    </div>
     
-    <!-- Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Popup">
     </div>
 
-    <!-- About Me Section -->
     <section id="about" class="about">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="container">
             <h2 style="text-align: center;">Mengenal Sang Fotografer</h2>
             <div class="about-content">
-                <img src="assets/images/about/foto-profil.jpg" alt="Alfi Andiha" style="width: 300px; height: 300px; object-fit: cover; border-radius: 10px; margin-right: 20px;">
-            <div>
-                <h3>Halo, Saya Alfi Andiha</h3>
-                <p>
-                    Berawal dari hobi menangkap cahaya di sore hari, kini fotografi telah menjadi nafas hidup saya selama lebih dari 5 tahun. 
-                    Saya percaya bahwa setiap orang memiliki cerita unik, dan tugas saya adalah mengabadikannya agar bisa dinikmati selamanya.
-                </p>
-                <p>
-                    Spesialisasi saya meliputi <strong>Wedding</strong>, <strong>Portrait</strong>, dan <strong>Commercial Photography</strong>. 
-                    Dalam setiap sesi, saya selalu mengutamakan kenyamanan klien agar ekspresi yang tertangkap adalah emosi yang paling jujur.
-                </p>
-                <div style="margin-top: 20px;">
-                    <strong>Kenapa memilih saya?</strong>
-                    <ul>
+                <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=400&h=400&fit=crop" alt="Alfi Andiha" class="profile-img">
+                <div class="about-text">
+                    <h3>Halo, Saya Alfi Andiha</h3>
+                    <p>Berawal dari hobi menangkap cahaya di sore hari, kini fotografi telah menjadi nafas hidup saya selama lebih dari 5 tahun. Saya percaya setiap orang memiliki cerita unik.</p>
+                    <p>Spesialisasi: <strong>Wedding</strong>, <strong>Portrait</strong>, & <strong>Commercial</strong>.</p>
+                    <ul class="benefit-list">
                         <li>Peralatan Profesional & Modern</li>
-                        <li>Proses Editing yang Detail dan Estetik</li>
+                        <li>Editing Detail & Estetik</li>
                         <li>Waktu Pengerjaan Tepat Waktu</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Promo & Penawaran Section -->
     <section id="promo" class="promo">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="container">
             <h2 style="text-align: center;">Penawaran Khusus</h2>
             <div class="promo-card">
-                <img src="path/to/promo-image.jpg" alt="Promo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-                <h3>Diskon 20% untuk sesi foto pre-wedding bulan ini!</h3>
-                <a href="https://wa.me/+6285163571804?text=Halo,%20saya%20tertarik%20dengan%20promo%20pre-wedding" class="btn-cta">Hubungi Saya</a>
-            </div>
-            <div class="testimonials">
-                <div class="testimonial-slider" id="testimonial-slider">
-                    <div class="testimonial">
-                        <img src="path/to/client1.jpg" alt="Client">
-                        <p>"Fotografer luar biasa! Hasilnya memukau."</p>
-                        <cite>- Nama Klien 1</cite>
-                    </div>
-                    <div class="testimonial">
-                        <img src="path/to/client2.jpg" alt="Client">
-                        <p>"Rekomendasi untuk semua acara wedding."</p>
-                        <cite>- Nama Klien 2</cite>
-                    </div>
-                    <!-- Tambahkan lebih banyak -->
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&h=400&fit=crop" alt="Promo">
+                <div class="promo-info">
+                    <h3>Diskon 20% Sesi Pre-Wedding!</h3>
+                    <p>Khusus pemesanan di bulan ini. Amankan tanggalmu sekarang.</p>
+                    <a href="https://wa.me/6285163571804?text=Halo%20Alfi,%20saya%20tertarik%20promo%20Pre-wedding" class="btn-cta">Hubungi Saya</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2023 [Alfi andiha]. All rights reserved.</p>
-        <a href="https://wa.me/6285163571804" class="btn-whatsapp">WhatsApp</a>
-        <a href="https://www.instagram.com/ethrn_al" class="btn-instagram">Instagram</a>
+        <p>&copy; 2025 Alfi Andiha. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://wa.me/6285163571804" class="btn-whatsapp">WhatsApp</a>
+            <a href="https://www.instagram.com/ethrn_al" class="btn-instagram">Instagram</a>
+        </div>
     </footer>
+
     <script src="assets/JS/script.js"></script>
-    
 </body>
 </html>
