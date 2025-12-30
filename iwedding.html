@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Saya - Wedding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+</head>
+<body>
+    <header style="position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.8); z-index: 10; padding: 10px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+            <h3 style="color: white; margin: 0;">[Alfi Andiha] Photographer</h3>
+            <nav>
+                <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none;">Kembali ke Utama</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="gallery" class="gallery" style="margin-top: 100px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h2 style="text-align: center;">Koleksi Foto Lengkap</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">Semua</button>
+                <button class="filter-btn" data-category="wedding">Wedding</button>
+                <button class="filter-btn" data-category="wedding">commercial</button>
+                <button class="filter-btn" data-category="portrait">Portrait</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="wedding">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Wedding" onclick="openLightbox(this.src)">
+                </div>
+                </div>
+        </div>      
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script src="assets/JS/script.js"></script>
+</body>
+</html>
