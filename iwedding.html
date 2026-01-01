@@ -3,43 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery Saya - Wedding</title>
+    <title>Gallery Saya - Alfi Andiha Photographer</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/CSS/styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .brand-name {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ff9900;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 120px 20px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 30px;
+        }
+
+        /* Filter Buttons */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: 1px solid #333;
+            background: transparent;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: #333;
+            color: white;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+    </style>
 </head>
 <body>
-    <header style="position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.8); z-index: 10; padding: 10px 0;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
-            <h3 style="color: white; margin: 0;">[Alfi Andiha] Photographer</h3>
+
+    <header>
+        <div class="header-container">
+            <h3 class="brand-name">Alfi Andiha <span style="font-weight: 400;">Photographer</span></h3>
             <nav>
-                <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none;">Kembali ke Utama</a>
+                <a href="index.html" class="nav-link">Kembali ke Utama</a>
             </nav>
         </div>
     </header>
 
-    <section id="gallery" class="gallery" style="margin-top: 100px;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="text-align: center;">Koleksi Foto Lengkap</h2>
+    <main>
+        <section id="gallery" class="gallery-section">
+            <h2 class="gallery-title">Koleksi Foto Lengkap</h2>
             
             <div class="filter-buttons">
                 <button class="filter-btn active" data-category="all">Semua</button>
                 <button class="filter-btn" data-category="wedding">Wedding</button>
-                <button class="filter-btn" data-category="wedding">commercial</button>
+                <button class="filter-btn" data-category="commercial">Commercial</button>
                 <button class="filter-btn" data-category="portrait">Portrait</button>
             </div>
-
-            <div class="gallery-grid">
-                <div class="gallery-item" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Wedding" onclick="openLightbox(this.src)">
-                </div>
-                </div>
-        </div>      
-    </section>
-
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="">
-    </div>
-
-    <script src="assets/JS/script.js"></script>
-</body>
-</html>
