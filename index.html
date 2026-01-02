@@ -3,121 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alfi Andiha | Professional Photographer Jakarta</title>
-    
-    <meta name="description" content="Portfolio Fotografi Profesional Alfi Andiha di Jakarta. Melayani Wedding, Portrait, dan Commercial.">
-    
+    <title>Alfi Andiha | Photographer Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/styles.css">
-    
-    <style>
-        /* Tambahkan ini di CSS Anda untuk scroll yang halus */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 <body>
    <header>
         <div class="header-container">
             <div class="logo-container">
-                <a href="#hero">
-                    <img src="https://via.placeholder.com/150x50/000000/FFFFFF?text=ALFI+ANDIHA" alt="Alfi Andiha Logo" class="main-logo">
-                </a>
+                <a href="#home" class="site-logo">Alfi Andiha</a>
             </div>
         
             <nav>
-                <ul class="nav-list">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#promo">Promo</a></li>
-                </ul>
+                <a href="#home" onclick="smoothScroll(event, 'home')">Hero</a>
+                <a href="#gallery" onclick="smoothScroll(event, 'gallery')">Gallery</a>
+                <a href="#about" onclick="smoothScroll(event, 'about')">About</a>
+                <a href="#promo" onclick="smoothScroll(event, 'promo')">Promo</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section id="hero" class="hero">
-            <div class="hero-content">
-                <h1>Menangkap Momen, Mengabadikan Cerita</h1>
-                <p>Professional Photographer berbasis di Jakarta.</p>
-                <a href="#gallery" class="btn-cta">Lihat Karya Saya</a>
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Menangkap Momen, Mengabadikan Cerita – Professional Photographer berbasis di Jakarta.</h1>
+            <button class="btn-cta" onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})">Lihat Karya Saya</button>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Hasil Pekerjaan</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">Semua</button>
+                <button class="filter-btn" data-category="wedding">Wedding</button>
+                <button class="filter-btn" data-category="portrait">Portrait</button>
+                <button class="filter-btn" data-category="commercial">Commercial</button>
+                <button class="filter-btn" data-category="event">Event</button>
             </div>
-        </section>
-
-        <section id="gallery" class="gallery">
-            <div class="container">
-                <h2 class="section-title">Hasil Pekerjaan</h2>
-                
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-category="all">Semua</button>
-                    <button class="filter-btn" data-category="wedding">Wedding</button>
-                    <button class="filter-btn" data-category="portrait">Portrait</button>
-                    <button class="filter-btn" data-category="commercial">Commercial</button>
-                    <button class="filter-btn" data-category="event">Event</button>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="wedding">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=800&fit=crop" alt="Wedding" onclick="openLightbox(this.src)">
                 </div>
-                
-                <div class="gallery-grid">
-                    <div class="gallery-item" data-category="wedding">
-                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600" alt="Wedding Photography Jakarta" loading="lazy" onclick="openLightbox(this.src)">
-                    </div>
-                    </div>
-
-                <div class="more-photos">
-                    <a href="gallery-detail.html" class="btn-secondary">Lihat Semua Koleksi</a>
+                <div class="gallery-item" data-category="portrait">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=800&fit=crop" alt="Portrait" onclick="openLightbox(this.src)">
                 </div>
-            </div>      
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2>Mengenal Sang Fotografer</h2>
-                <div class="about-flex-container">
-                    <div class="about-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=400" alt="Alfi Andiha Profile" class="profile-img">
-                    </div>
-                    <div class="about-text">
-                        <h3>Halo, Saya Alfi Andiha</h3>
-                        <p>Berawal dari hobi menangkap cahaya, kini fotografi telah menjadi nafas hidup saya selama lebih dari 5 tahun.</p>
-                        <div class="specialization">
-                            <span><strong>Wedding</strong></span>
-                            <span><strong>Portrait</strong></span>
-                            <span><strong>Commercial</strong></span>
-                        </div>
-                    </div>
+                <div class="gallery-item" data-category="commercial">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=800&fit=crop" alt="Product" onclick="openLightbox(this.src)">
+                </div>
+                <div class="gallery-item" data-category="event">
+                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&h=800&fit=crop" alt="Event" onclick="openLightbox(this.src)">
+                </div>
+                <div class="gallery-item" data-category="wedding">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=800&fit=crop" alt="Wedding 2" onclick="openLightbox(this.src)">
+                </div>
+                <div class="gallery-item" data-category="portrait">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop" alt="Portrait 2" onclick="openLightbox(this.src)">
                 </div>
             </div>
-        </section>
 
-        <section id="promo" class="promo">
-            <div class="container">
-                <div class="promo-card">
-                    <div class="promo-image">
-                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200" alt="Promo Pre-wedding" loading="lazy">
-                    </div>
-                    <div class="promo-info">
-                        <h3>Diskon 20% Sesi Pre-Wedding!</h3>
-                        <p>Khusus pemesanan di bulan ini. Amankan tanggalmu sekarang.</p>
-                        <a href="https://wa.me/6285163571804" class="btn-whatsapp">Hubungi via WhatsApp</a>
-                    </div>
-                </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn-cta">Lihat Lebih Banyak Foto</a>
             </div>
-        </section>
-    </main>
-
-    <div id="lightbox" class="lightbox" aria-hidden="true" onclick="closeLightbox()">
+        </div>      
+    </section>
+    
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="close-lightbox">&times;</span>
-        <img id="lightbox-img" src="" alt="Preview">
+        <img id="lightbox-img" src="" alt="Popup">
     </div>
 
-    <footer class="footer">
+    <section id="about" class="about">
         <div class="container">
-            <p>&copy; 2026 Alfi Andiha Photographer. Dibuat dengan dedikasi.</p>
-            <div class="social-links">
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">WhatsApp</a>
+            <h2 style="text-align: center;">Mengenal Sang Fotografer</h2>
+            <div class="about-content">
+                <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=400&h=400&fit=crop" alt="Alfi Andiha" class="profile-img">
+                <div class="about-text">
+                    <h3>Halo, Saya Alfi Andiha</h3>
+                    <p>Berawal dari hobi menangkap cahaya di sore hari, kini fotografi telah menjadi nafas hidup saya selama lebih dari 5 tahun. Saya percaya setiap orang memiliki cerita unik.</p>
+                    <p>Spesialisasi: <strong>Wedding</strong>, <strong>Portrait</strong>, & <strong>Commercial</strong>.</p>
+                    <ul class="benefit-list">
+                        <li>Peralatan Profesional & Modern</li>
+                        <li>Editing Detail & Estetik</li>
+                        <li>Waktu Pengerjaan Tepat Waktu</li>
+                    </ul>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section id="promo" class="promo">
+        <div class="container">
+            <h2 style="text-align: center;">Penawaran Khusus</h2>
+            <div class="promo-card">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&h=400&fit=crop" alt="Promo">
+                <div class="promo-info">
+                    <h3>Diskon 20% Sesi Pre-Wedding!</h3>
+                    <p>Khusus pemesanan di bulan ini. Amankan tanggalmu sekarang.</p>
+                    <a href="https://wa.me/6285163571804?text=Halo%20Alfi,%20saya%20tertarik%20promo%20Pre-wedding" class="btn-cta">Hubungi Saya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Alfi Andiha. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://wa.me/6285163571804" class="btn-whatsapp">WhatsApp</a>
+            <a href="https://www.instagram.com/ethrn_al" class="btn-instagram">Instagram</a>
         </div>
     </footer>
 

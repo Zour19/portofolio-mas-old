@@ -2,13 +2,14 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    color: #333;
-    background: #fff;
+    color: #1A1A1A;
+    background: #FAF9F6; /* Asyura Lab off-white */
     scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
+    color: #1A1A1A;
 }
 
 .container {
@@ -22,9 +23,11 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0,0,0,0.9);
+    background: rgba(250,249,246,0.95);
     z-index: 100;
     padding: 15px 0;
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 
 .header-container {
@@ -36,37 +39,44 @@ header {
     padding: 0 20px;
 }
 
-header h3 { color: white; margin: 0; }
-header nav a { color: white; margin-left: 20px; text-decoration: none; font-size: 14px; }
+header h3 { color: #1A1A1A; margin: 0; }
+header nav a { color: #1A1A1A; margin-left: 20px; text-decoration: none; font-size: 14px; }
+
+.site-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #1A1A1A;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
 
 /* Hero Section */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1600') center/cover;
+.home {
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1600') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: #1A1A1A;
 }
 
-.hero-content h1 { font-size: 3rem; max-width: 800px; margin-bottom: 30px; }
+.home-content h1 { font-size: 2.5rem; max-width: 800px; margin-bottom: 30px; font-family: 'Playfair Display', serif; }
 
 .btn-cta {
-    background: #c0392b;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
+    background: transparent;
+    color: #1A1A1A;
+    padding: 12px 26px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: 0.25s;
     display: inline-block;
 }
 
-.btn-cta:hover { background: #e74c3c; transform: translateY(-3px); }
+.btn-cta:hover { background: rgba(0,0,0,0.03); transform: translateY(-2px); }
 
 /* Gallery */
 .filter-buttons { text-align: center; margin-bottom: 30px; }
@@ -92,10 +102,11 @@ header nav a { color: white; margin-left: 20px; text-decoration: none; font-size
     object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.45s ease, filter 0.45s ease;
+    filter: grayscale(100%) contrast(0.95) saturate(0.8);
 }
 
-.gallery-item img:hover { filter: brightness(0.8); }
+.gallery-item img:hover { filter: none; transform: scale(1.03); }
 
 /* Lightbox */
 .lightbox {
@@ -112,19 +123,20 @@ header nav a { color: white; margin-left: 20px; text-decoration: none; font-size
 
 /* About Me */
 .about-content { display: flex; align-items: center; margin-top: 30px; gap: 40px; }
-.profile-img { width: 350px; border-radius: 15px; }
+.profile-img { width: 350px; border-radius: 12px; filter: grayscale(100%); transition: filter .4s ease; }
+.profile-img:hover { filter: none; }
 .benefit-list { padding-left: 20px; margin-top: 15px; }
 
 /* Promo */
-.promo-card { position: relative; border-radius: 15px; overflow: hidden; }
+.promo-card { position: relative; border-radius: 12px; overflow: hidden; }
 .promo-info {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.35);
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     color: white; text-align: center;
 }
 
 /* Footer */
-.footer { background: #1a1a1a; color: white; text-align: center; padding: 40px 20px; }
+.footer { background: transparent; color: #1A1A1A; text-align: center; padding: 40px 20px; border-top: 1px solid rgba(0,0,0,0.05); }
 .social-links { margin-top: 20px; }
-.social-links a { color: white; margin: 0 10px; text-decoration: none; border: 1px solid white; padding: 8px 15px; border-radius: 5px; }
+.social-links a { color: #1A1A1A; margin: 0 10px; text-decoration: none; border: 1px solid rgba(0,0,0,0.06); padding: 8px 15px; border-radius: 6px; }
