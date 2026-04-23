@@ -3,115 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alfi Andiha | Photographer Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Asyura Lab | Professional Photography Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/styles.css">
 </head>
 <body>
-   <header>
-        <div class="header-container">
-            <div class="logo-container">
-                <a href="#home" class="site-logo">Alfi Andiha</a>
-            </div>
-        
-            <nav>
-                <a href="#home" onclick="smoothScroll(event, 'home')">Hero</a>
-                <a href="#gallery" onclick="smoothScroll(event, 'gallery')">Gallery</a>
-                <a href="#about" onclick="smoothScroll(event, 'about')">About</a>
-                <a href="#promo" onclick="smoothScroll(event, 'promo')">Promo</a>
+    <header>
+        <div class="header-container container">
+            <a href="#home" class="site-logo">Asyura Lab</a>
+            <nav id="menu" class="nav-links">
+                <a href="#home" onclick="smoothScroll(event, 'home')">Beranda</a>
+                <a href="#services" onclick="smoothScroll(event, 'services')">Layanan</a>
+                <a href="#portfolio" onclick="smoothScroll(event, 'portfolio')">Portofolio</a>
+                <a href="#about" onclick="smoothScroll(event, 'about')">Tentang</a>
+                <a href="#contact" onclick="smoothScroll(event, 'contact')">Kontak</a>
             </nav>
+            <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Pesan Sekarang</button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <section id="home" class="home">
-        <div class="home-content">
-            <h1>Menangkap Momen, Mengabadikan Cerita – Professional Photographer berbasis di Jakarta.</h1>
-            <button class="btn-cta" onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})">Lihat Karya Saya</button>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="eyebrow">Portofolio Fotografi Profesional</span>
+                <h1>Memotret cerita Anda dengan gaya elegan dan modern.</h1>
+                <p>Asyura Lab membantu merekam momen pernikahan, portrait, komersial, dan acara khusus dengan desain visual storytelling profesional.</p>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn-primary">Lihat Portofolio</a>
+                    <a href="#contact" class="btn-secondary">Konsultasi Gratis</a>
+                </div>
+            </div>
+        </section>
 
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2>Hasil Pekerjaan</h2>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-category="all">Semua</button>
-                <button class="filter-btn" data-category="wedding">Wedding</button>
-                <button class="filter-btn" data-category="portrait">Portrait</button>
-                <button class="filter-btn" data-category="commercial">Commercial</button>
-                <button class="filter-btn" data-category="event">Event</button>
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Layanan Unggulan</span>
+                    <h2>Solusi visual lengkap untuk setiap proyek.</h2>
+                    <p>Kami menyediakan paket fotografi yang dirancang untuk menonjolkan kualitas, gaya, dan identitas brand serta personal Anda.</p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <h3>Wedding Photography</h3>
+                        <p>Dokumentasi pernikahan dengan komposisi emosi, detail, dan estetika yang elegan.</p>
+                        <ul>
+                            <li>Pre-wedding & wedding day</li>
+                            <li>Editing kreatif</li>
+                            <li>Album digital</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <h3>Portrait & Personal Branding</h3>
+                        <p>Potret profesional untuk profil, media sosial, dan branding bisnis pribadi.</p>
+                        <ul>
+                            <li>Studio & outdoor</li>
+                            <li>Konsep visual tersendiri</li>
+                            <li>Retouch natural</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <h3>Commercial & Product</h3>
+                        <p>Foto produk dan materi pemasaran yang siap digunakan untuk kampanye digital dan cetak.</p>
+                        <ul>
+                            <li>Flat lay & still life</li>
+                            <li>Foto lifestyle</li>
+                            <li>Retouch profesional</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=800&fit=crop" alt="Wedding" onclick="openLightbox(this.src)">
-                </div>
-                <div class="gallery-item" data-category="portrait">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=800&fit=crop" alt="Portrait" onclick="openLightbox(this.src)">
-                </div>
-                <div class="gallery-item" data-category="commercial">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=800&fit=crop" alt="Product" onclick="openLightbox(this.src)">
-                </div>
-                <div class="gallery-item" data-category="event">
-                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&h=800&fit=crop" alt="Event" onclick="openLightbox(this.src)">
-                </div>
-                <div class="gallery-item" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=800&fit=crop" alt="Wedding 2" onclick="openLightbox(this.src)">
-                </div>
-                <div class="gallery-item" data-category="portrait">
-                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop" alt="Portrait 2" onclick="openLightbox(this.src)">
-                </div>
-            </div>
+        </section>
 
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="#" class="btn-cta">Lihat Lebih Banyak Foto</a>
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Katalog Proyek</span>
+                    <h2>Galeri karya yang menunjukkan kualitas setiap kategori.</h2>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">Semua</button>
+                    <button class="filter-btn" data-category="wedding">Wedding</button>
+                    <button class="filter-btn" data-category="portrait">Portrait</button>
+                    <button class="filter-btn" data-category="commercial">Commercial</button>
+                    <button class="filter-btn" data-category="event">Event</button>
+                </div>
+                <div class="gallery-grid">
+                    <article class="gallery-item" data-category="wedding" onclick="openLightbox(this.querySelector('img').src)">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=700&h=900&fit=crop" alt="Wedding">
+                        <div class="gallery-meta">
+                            <h3>Elegance Wedding</h3>
+                            <span>Wedding</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item" data-category="portrait" onclick="openLightbox(this.querySelector('img').src)">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=700&h=900&fit=crop" alt="Portrait">
+                        <div class="gallery-meta">
+                            <h3>Portrait Studio</h3>
+                            <span>Portrait</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item" data-category="commercial" onclick="openLightbox(this.querySelector('img').src)">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700&h=900&fit=crop" alt="Commercial">
+                        <div class="gallery-meta">
+                            <h3>Brand Campaign</h3>
+                            <span>Commercial</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item" data-category="event" onclick="openLightbox(this.querySelector('img').src)">
+                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=700&h=900&fit=crop" alt="Event">
+                        <div class="gallery-meta">
+                            <h3>Event Coverage</h3>
+                            <span>Event</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item" data-category="wedding" onclick="openLightbox(this.querySelector('img').src)">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=700&h=900&fit=crop" alt="Wedding Couple">
+                        <div class="gallery-meta">
+                            <h3>Modern Romance</h3>
+                            <span>Wedding</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item" data-category="portrait" onclick="openLightbox(this.querySelector('img').src)">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=700&h=900&fit=crop" alt="Portrait Model">
+                        <div class="gallery-meta">
+                            <h3>Personal Brand</h3>
+                            <span>Portrait</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="portfolio-action">
+                    <a href="#contact" class="btn-primary">Minta Proposal</a>
+                </div>
             </div>
-        </div>      
-    </section>
-    
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close-lightbox">&times;</span>
-        <img id="lightbox-img" src="" alt="Popup">
+        </section>
+
+        <section id="about" class="about">
+            <div class="container about-grid">
+                <div class="about-text-block">
+                    <span class="eyebrow">Tentang Saya</span>
+                    <h2>Fotografer profesional dengan pendekatan naratif dan detail.</h2>
+                    <p>Saya adalah Alfi Andiha, fotografer yang menggabungkan estetika visual dan pengalaman klien. Setiap sesi dirancang untuk memberi kesan profesional sekaligus nyaman.</p>
+                    <ul class="stats-list">
+                        <li><strong>5+</strong> Tahun pengalaman</li>
+                        <li><strong>200+</strong> Proyek tuntas</li>
+                        <li><strong>100%</strong> Kepuasan klien</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary">Diskusi Proyek</a>
+                </div>
+                <div class="about-card">
+                    <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=600&h=800&fit=crop" alt="Alfi Andiha" class="profile-img">
+                    <div class="about-card-info">
+                        <h3>Alfi Andiha</h3>
+                        <p>Fotografer Utama & Creative Lead</p>
+                        <div class="tag-list">
+                            <span>Wedding</span>
+                            <span>Portrait</span>
+                            <span>Commercial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container contact-card">
+                <div>
+                    <span class="eyebrow">Hubungi Saya</span>
+                    <h2>Siap mewujudkan ide visual Anda?</h2>
+                    <p>Kirim detail proyek Anda dan saya akan segera menghubungi untuk diskusi konsep, biaya, dan jadwal.</p>
+                </div>
+                <div class="contact-actions">
+                    <a href="https://wa.me/6285163571804?text=Halo%20Alfi,%20saya%20ingin%20membahas%20proyek%20fotografi" class="btn-primary">WhatsApp</a>
+                    <a href="mailto:asyuralab@example.com" class="btn-secondary">Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <span class="close-lightbox" onclick="closeLightbox(event)">&times;</span>
+        <img id="lightbox-img" src="" alt="Pratinjau Karya">
     </div>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 style="text-align: center;">Mengenal Sang Fotografer</h2>
-            <div class="about-content">
-                <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=400&h=400&fit=crop" alt="Alfi Andiha" class="profile-img">
-                <div class="about-text">
-                    <h3>Halo, Saya Alfi Andiha</h3>
-                    <p>Berawal dari hobi menangkap cahaya di sore hari, kini fotografi telah menjadi nafas hidup saya selama lebih dari 5 tahun. Saya percaya setiap orang memiliki cerita unik.</p>
-                    <p>Spesialisasi: <strong>Wedding</strong>, <strong>Portrait</strong>, & <strong>Commercial</strong>.</p>
-                    <ul class="benefit-list">
-                        <li>Peralatan Profesional & Modern</li>
-                        <li>Editing Detail & Estetik</li>
-                        <li>Waktu Pengerjaan Tepat Waktu</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="promo" class="promo">
-        <div class="container">
-            <h2 style="text-align: center;">Penawaran Khusus</h2>
-            <div class="promo-card">
-                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&h=400&fit=crop" alt="Promo">
-                <div class="promo-info">
-                    <h3>Diskon 20% Sesi Pre-Wedding!</h3>
-                    <p>Khusus pemesanan di bulan ini. Amankan tanggalmu sekarang.</p>
-                    <a href="https://wa.me/6285163571804?text=Halo%20Alfi,%20saya%20tertarik%20promo%20Pre-wedding" class="btn-cta">Hubungi Saya</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <footer class="footer">
-        <p>&copy; 2025 Alfi Andiha. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://wa.me/6285163571804" class="btn-whatsapp">WhatsApp</a>
-            <a href="https://www.instagram.com/ethrn_al" class="btn-instagram">Instagram</a>
+        <div class="container footer-grid">
+            <div>
+                <a href="#home" class="site-logo footer-logo">Asyura Lab</a>
+                <p>Fotografi profesional yang memadukan estetika, cerita, dan hasil akhir berkualitas.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://wa.me/6285163571804">WhatsApp</a>
+                <a href="https://www.instagram.com/ethrn_al">Instagram</a>
+                <a href="#contact">Kontak</a>
+            </div>
         </div>
+        <p class="footer-copy">&copy; 2025 Asyura Lab. Semua hak cipta dilindungi.</p>
     </footer>
 
     <script src="assets/JS/script.js"></script>
